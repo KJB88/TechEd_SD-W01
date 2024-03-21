@@ -1,0 +1,101 @@
+/* COMMON STYLING*/
+:root {
+  font-family: sans-serif;
+  max-width: 100%; /* Constrain content to viewport */
+  overflow-x: hidden; /* To stop X overflow from creating a horizontal scroll bar */
+  margin: -8px; /* Remove white 'border' margins */
+}
+
+/* HEADER STYLING*/
+header {
+  position: fixed;
+  z-index: 2;
+  width: 694.45px;
+  height: 118px;
+
+  background-color: transparent;
+
+  .headerflex {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    justify-content: center;
+  }
+
+  h1 {
+    padding-left: 20px;
+  }
+
+  /* NAV */
+  nav {
+    align-self: center;
+    width: 60%;
+
+    /* Nav Unordered List*/
+    ul {
+      display: flex;
+      flex-flow: row nowrap;
+
+      justify-content: flex-start;
+
+      list-style: none;
+      width: 100%;
+      height: 38px;
+
+      font-weight: bold;
+
+      /* Nav UL Anchor */
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      /* Nav UL List Item*/
+      li {
+        padding-top: 2px;
+        padding-right: 40px;
+        display: flex;
+        font-size: 20px;
+        align-items: center;
+
+        :hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+/* BODY STYLING*/
+body {
+  z-index: 1;
+
+  .gridwrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+
+  /* BG Image */
+  .background {
+    position: absolute;
+    z-index: 0;
+    top: 0px; /* Required to remove top white border*/
+    height: 100%;
+    width: 100%;
+    background-image: url("./assets/img/bg_img/mc1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+}
+
+/* FOOTER STYLING*/
+footer {
+  z-index: 1;
+  #footer-date {
+    font-weight: bold;
+  }
+}
