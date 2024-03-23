@@ -153,23 +153,24 @@ article a {
   font-size: 24px;
   text-decoration: none;
   border: solid 5px;
-  box-shadow: var(--drop-shadow-displacement / 2) var(--drop-shadow-color);
   border-color: invert(var(--bg-color));
 }
 
 article a:hover {
   text-decoration: none;
   color: var(--text-color);
-  background-color: white;
+  background-color: var(--bg-color);
 }
 
 /* FOOTER */
-footer {
-  position: sticky;
+#footer-date {
   width: 100%;
+  padding: 25px 0;
 
   background-image: url("./assets/img/bg_img/grassblock.jpg");
   background-size: contain;
+
+  font-size: 20px;
   font-weight: bold;
   text-align: center;
 

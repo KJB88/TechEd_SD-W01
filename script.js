@@ -1,6 +1,8 @@
 // Apply Footer Date
 const footerDate = document.getElementById("footer-date");
-footerDate.textContent = new Date().getFullYear(); // Get current year
+const year = new Date().getFullYear(); // Get current year
+const copyrightStr = "MyCraft ©";
+footerDate.textContent = `${copyrightStr} ${year}`;
 
 // Mode Button setup
 const modeButton = document.getElementById("mode-toggle");
