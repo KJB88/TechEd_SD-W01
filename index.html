@@ -1,50 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" date-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <script src="footerDate.js" defer></script>
     <title>MeinHandwerk</title>
 </head>
 
 <body>
     <!---HEADER--->
     <header>
-        <div class="headerflex">
-            <h1>MeinHandwerk</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1 class="drop-shadow-2px">MeinHandwerk</h1>
+        <nav>
+            <a class="drop-shadow-2px" href="#">Home</a>
+            <a class="drop-shadow-2px" href="#">About</a>
+            <a class="drop-shadow-2px" href="#">Contact</a>
+        </nav>
+        <button id="mode-toggle">L</button>
     </header>
+
     <!---MAIN--->
     <main>
-        <section>
-            <div class="background">
-                <div class="title">
-                    <h2>Featured Post</h2>
-                    <h1>How to make a splash page</h1>
-                    <a href="#">Read more</a>"
-                </div>
-            </div>
+        <section class="feature image-tower">
+            <article class="drop-shadow-2px">
+                <h2>Featured Post</h2>
+                <h1>How to make a splash page</h1>
+                <a href="#">Read more</a>"
+            </article>
         </section>
-        <section>
 
+        <section class="feature image-hill">
+            <article class="drop-shadow-2px">
+                <h2>Featured Post</h2>
+                <h1>How to make a splash page</h1>
+                <a href="#">Read more</a>"
+            </article>
         </section>
-        <section>
 
+        <section class="feature image-cave">
+            <article class="drop-shadow-2px">
+                <h2>Featured Post</h2>
+                <h1>How to make a splash page</h1>
+                <a href="#">Read more</a>"
+            </article>
         </section>
     </main>
     <!---FOOTER--->
     <footer>
-        <div id="footer-date">MeinHandwerk © 2024</div>
+
+        <span>MeinHandwerk © </span>
+        <span id="footer-date"></span>
     </footer>
 </body>
 
