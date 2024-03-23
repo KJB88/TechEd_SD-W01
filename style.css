@@ -17,19 +17,23 @@ html {
 :root,
 [data-theme="light"] {
   --text-color: black;
-  --drop-shadow-color: white;
+  --drop-shadow-color: grey;
   --bg-color: white;
+  --drop-shadow-displacement: -2px -1px;
+  filter: brightness(100%);
 }
 
 [data-theme="dark"] {
   --text-color: white;
   --drop-shadow-color: black;
   --bg-color: black;
+  --drop-shadow-displacement: 2px 2px;
+  filter: brightness(75%);
 }
 
 /* Drop Shadow for readability due to noisy BGs*/
 .drop-shadow-2px {
-  filter: drop-shadow(var(--drop-shadow-color) 2px 2px);
+  filter: drop-shadow(var(--drop-shadow-color) var(--drop-shadow-displacement));
 }
 
 .no-pointer-events {
@@ -88,8 +92,10 @@ a:hover {
   background-color: var(--bg-color);
 }
 
-/* Brightness Slider */
+/* Removed due to transform update breaking fixed positioning
 #brightness-slider {
+  z-index: 1;
+  position: absolute;
   right: 277.5px;
   top: 75px;
   width: 100px;
@@ -97,9 +103,9 @@ a:hover {
 
 #slider-descriptor {
   position: absolute;
-  padding-left: 25px;
   font-size: 16px;
 }
+*/
 
 /* Background */
 .feature {
@@ -123,18 +129,47 @@ a:hover {
 /* Article Content */
 article {
   position: absolute;
+  bottom: 200px;
+  left: 3rem;
 
   display: flex;
   flex-direction: column;
 
   color: var(--text-color);
-  background-color: rgba(var(--bg-color), 0.2);
+}
+
+article h2 {
+  font-size: 1.2rem;
+}
+
+article h1 {
+  font-size: 2.5rem;
+}
+article a {
+  text-align: center;
+  margin-top: 20px;
+  width: 250px;
+  font-weight: bold;
+  font-size: 24px;
+  text-decoration: none;
+  border: solid 5px;
+  box-shadow: var(--drop-shadow-displacement / 2) var(--drop-shadow-color);
+  border-color: invert(var(--bg-color));
+}
+
+article a:hover {
+  text-decoration: none;
+  color: var(--text-color);
+  background-color: white;
 }
 
 /* FOOTER */
 footer {
+  position: sticky;
   width: 100%;
-  padding-top: 10px;
+
+  background-image: url("./assets/img/bg_img/grassblock.jpg");
+  background-size: contain;
   font-weight: bold;
   text-align: center;
 

@@ -6,12 +6,14 @@ footerDate.textContent = new Date().getFullYear(); // Get current year
 const modeButton = document.getElementById("mode-toggle");
 modeButton.addEventListener("click", onThemeChange); // Hook listener
 
+/* Removed due to transform update breaking fixed positioning
 // Brightness Slider setup
 const brightnessSlider = document.getElementById("brightness-slider");
 brightnessSlider.addEventListener("input", onBrightnessSliderChange);
 const brightnessDescriptor = document.getElementById("slider-descriptor");
 brightnessSlider.value = 100; // Quick fix to apply default value; use browser local data for future
 setBrightnessDescriptorText(brightnessSlider.value);
+*/
 
 // Assign initial theme
 var currentTheme = document.querySelector("html").getAttribute("data-theme");
@@ -39,6 +41,7 @@ function isThemeDark(newTheme) {
   else return "dark";
 }
 
+/* Removed due to transform update breaking fixed positioning
 function onBrightnessSliderChange() {
   const newVal = this.value;
 
@@ -51,3 +54,4 @@ function onBrightnessSliderChange() {
 function setBrightnessDescriptorText(value) {
   brightnessDescriptor.textContent = `${value}%`;
 }
+*/
