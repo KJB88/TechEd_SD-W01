@@ -1,30 +1,35 @@
 <!DOCTYPE html>
-<html lang="en" date-theme="light">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <title>MeinHandwerk</title>
+    <title>MyCraft: Totally Original Game!</title>
 </head>
 
 <body>
     <!---HEADER--->
     <header>
-        <h1 class="drop-shadow-2px">MeinHandwerk</h1>
+        <h1 class="drop-shadow-2px no-pointer-events">MyCraft</h1>
+        <span class="heading-subtitle drop-shadow-2px no-pointer-events">Totally Original Game</span>
         <nav>
             <a class="drop-shadow-2px" href="#">Home</a>
             <a class="drop-shadow-2px" href="#">About</a>
             <a class="drop-shadow-2px" href="#">Contact</a>
         </nav>
-        <button id="mode-toggle">L</button>
+        <button id="mode-toggle"></button>
+        <div>
+            <p id="slider-descriptor">100%</p>
+            <input type="range" id="brightness-slider" min="25" max="100">
+        </div>
     </header>
 
     <!---MAIN--->
     <main>
         <section class="feature image-tower">
-            <article class="drop-shadow-2px">
+            <article>
                 <h2>Featured Post</h2>
                 <h1>How to make a splash page</h1>
                 <a href="#">Read more</a>"
@@ -32,7 +37,7 @@
         </section>
 
         <section class="feature image-hill">
-            <article class="drop-shadow-2px">
+            <article>
                 <h2>Featured Post</h2>
                 <h1>How to make a splash page</h1>
                 <a href="#">Read more</a>"
@@ -40,7 +45,7 @@
         </section>
 
         <section class="feature image-cave">
-            <article class="drop-shadow-2px">
+            <article>
                 <h2>Featured Post</h2>
                 <h1>How to make a splash page</h1>
                 <a href="#">Read more</a>"
@@ -50,7 +55,7 @@
     <!---FOOTER--->
     <footer>
 
-        <span>MeinHandwerk © </span>
+        <span>MyCraft © </span>
         <span id="footer-date"></span>
     </footer>
 </body>

@@ -16,13 +16,13 @@ html {
 /* Light / Dark Mode */
 :root,
 [data-theme="light"] {
-  --color-text: black;
+  --text-color: black;
   --drop-shadow-color: white;
   --bg-color: white;
 }
 
 [data-theme="dark"] {
-  --color-text: white;
+  --text-color: white;
   --drop-shadow-color: black;
   --bg-color: black;
 }
@@ -32,19 +32,33 @@ html {
   filter: drop-shadow(var(--drop-shadow-color) 2px 2px);
 }
 
+.no-pointer-events {
+  pointer-events: none;
+}
+
 /* HEADER */
 header {
+  position: fixed;
+
   display: flex;
   align-items: center;
-  position: fixed;
   padding: 2.5rem 3rem;
   gap: 3rem;
   z-index: 1;
+  width: 100%;
 }
 
 header h1 {
-  color: var(--color-text);
-  pointer-events: none;
+  color: var(--text-color);
+}
+
+.heading-subtitle {
+  position: absolute;
+  font-weight: bold;
+  bottom: 27.5px;
+  left: 37.5px;
+  font-size: 14px;
+  color: var(--text-color);
 }
 
 /* NAV */
@@ -55,29 +69,44 @@ nav {
   align-items: center;
 }
 
-nav a {
-  margin-top: 4px; /* Minor adjustment*/
+a {
   font-weight: 700;
-  color: var(--color-text);
+  color: var(--text-color);
   text-decoration: none;
 }
 
-nav a:hover {
+a:hover {
   text-decoration: underline;
 }
 
-header button {
-  height: 32px;
-  width: 32px;
-  background-color: black;
+/* Mode Button */
+#mode-toggle {
+  overflow: hidden;
+  width: 120px;
+  height: 25px;
+  color: var(--text-color);
+  background-color: var(--bg-color);
 }
-/* BACKGROUND*/
-.global-background {
-  height: 100vh;
-  width: 120%;
-  margin: -10px;
+
+/* Brightness Slider */
+#brightness-slider {
+  right: 277.5px;
+  top: 75px;
+  width: 100px;
+}
+
+#slider-descriptor {
+  position: absolute;
+  padding-left: 25px;
+  font-size: 16px;
+}
+
+/* Background */
+.feature {
+  position: relative;
   background-size: cover;
   background-position: center;
+  height: 100vh;
 }
 
 /* BG Images */
@@ -91,30 +120,24 @@ header button {
   background-image: url("./assets/img/bg_img/mc3.jpg");
 }
 
-/* Mode Button */
-#mode-toggle {
-  color: var(--color-text);
-  background-color: var(--bg-color);
-}
-
 /* Article Content */
-.feature {
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-}
-
 article {
-  color: var(--color-text);
   position: absolute;
+
   display: flex;
   flex-direction: column;
+
+  color: var(--text-color);
+  background-color: rgba(var(--bg-color), 0.2);
 }
+
 /* FOOTER */
 footer {
   width: 100%;
   padding-top: 10px;
   font-weight: bold;
   text-align: center;
+
+  color: var(--text-color);
+  background-color: var(--bg-color);
 }
