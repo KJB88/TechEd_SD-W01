@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script src="./assets/js/viewModeToggle.js" defer></script>
+    <script src="./assets/js/footerDate.js" defer></script>
+    <script src="./assets/js/audioPlayer.js" defer></script>
     <title>MyCraft: Totally Original Game!</title>
 </head>
 
@@ -15,50 +17,70 @@
         <h1 class="drop-shadow-2px no-pointer-events">MyCraft</h1>
         <span class="heading-subtitle drop-shadow-2px no-pointer-events">Totally Original Game</span>
         <nav>
-            <a class="drop-shadow-2px" href="#">Home</a>
-            <a class="drop-shadow-2px" href="#">About</a>
-            <a class="drop-shadow-2px" href="#">Contact</a>
+            <a class="drop-shadow-2px" href="#first-article">Home</a>
+            <a class="drop-shadow-2px" href="#second-article">About</a>
+            <a class="drop-shadow-2px" href="#third-article">Contact</a>
         </nav>
-        <button id="mode-toggle"></button>
+        <button aria-label="Dark or Light Mode Toggle" id="mode-toggle"></button>
     </header>
-
 
     <!---MAIN--->
     <main>
-        <section class="feature image-tower">
+        <section id="first-article" class="feature image-tower">
             <article>
                 <article class="article-background"></article>
                 <div>
                     <h2 class="drop-shadow-2px">Featured Post</h2>
-                    <h1 class="drop-shadow-2px">How to make a splash page</h1>
+                    <h1 class="drop-shadow-2px">101 ways to clone a game without infringing on copyright.</h1>
                 </div>
-                <a class="drop-shadow-2px" href="#">Read more</a>
+                <a class="drop-shadow-2px" href="#"
+                    aria-label="Goes to another page with the headline: 101 ways to clone a game without infringing on copyright">Read
+                    more</a>
             </article>
         </section>
 
-        <section class="feature image-hill">
+        <section id="second-article" class="feature image-hill">
             <article>
                 <div>
                     <h2 class="drop-shadow-2px">Featured Post</h2>
-                    <h1 class="drop-shadow-2px">How to make a splash page</h1>
+                    <h1 class="drop-shadow-2px">
+                        Advice from experts about dealing with your inevitable copyright civil lawsuit.
+                    </h1>
                 </div>
-                <a class="drop-shadow-2px" href="#">Read more</a>
+                <a class="drop-shadow-2px" href="#"
+                    aria-label="Goes to another page with the headline: Advice from experts about dealing with your inevitable copyright civil lawsuit.">Read
+                    more</a>
             </article>
         </section>
 
-        <section class="feature image-cave">
+        <section id="third-article" class="feature image-cave">
             <article>
                 <div>
                     <h2 class="drop-shadow-2px">Featured Post</h2>
-                    <h1 class="drop-shadow-2px">How to make a splash page</h1>
+                    <h1 class="drop-shadow-2px" id="jail-has-good-wifi">Life Behind Bars for Copyright Infringement: A
+                        retrospective.</h1>
                 </div>
-                <a class="drop-shadow-2px" href="#">Read more</a>
+                <a class="drop-shadow-2px" href="#"
+                    aria-label="Goes to another page with the headline: Life Behind Bars for Copyright Infringement: A retrospective.">Read
+                    more</a>
             </article>
         </section>
+
+        <div class="audio-div" aria-label="Audio Player and Label">
+            <span id="audio-label" class="drop-shadow-2px">Playing: SONG_NAME by ARTIST_NAME</span>
+            <audio id="audio-player" type="audio/mp3" controls autoplay muted>Your browser
+                does not support the
+                audio
+                element.</audio>
+        </div>
     </main>
     <!---FOOTER--->
     <footer>
-        <h1 id="footer-date"></h1>
+        <div>
+            <a class="return-to-top drop-shadow-2px" href="#">Return to Top</a>
+            <h1 id="footer-date" class="drop-shadow-2px"></h1>
+        </div>
+
     </footer>
 </body>
 
