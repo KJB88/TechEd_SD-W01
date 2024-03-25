@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>:mortar_board: Tech Educators' Software Development Bootcamp :mortar_board:<br/>:mortar_board: Week 01 Assessment :mortar_board:</h1>
+  <h1>:mortar_board: Tech Educators' SWD Bootcamp :mortar_board:<br/>:mortar_board: Week 01 Assessment :mortar_board:</h1>
   <p>
     <a href="http://www.LinkedIn.com/in/kevin-barr1988">LinkedIn</a> |
     <a href="http://kjb88.github.io">Portfolio</a> |
